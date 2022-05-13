@@ -14,14 +14,17 @@ public class PuzzleGameScript : MonoBehaviour
 
     private int emptySpaceIndex = 15;
 
-    // Start is called before the first frame update
+    private bool _isFinished;
+
+    [SerializeField]
+    private GameObject finishedPanel;
+
     void Start()
     {
         _camera = Camera.main;
         Shuffle();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -42,6 +45,25 @@ public class PuzzleGameScript : MonoBehaviour
                     puzzles[puzzleIndex] = null;
                     emptySpaceIndex = puzzleIndex;
                 }
+            }
+        }
+
+        if (!_isFinished)
+        {
+            int correctPuzzles = 0;
+            foreach (var a in puzzles)
+            {
+                if (a != null)
+                {
+                    if (a.inRightPlace)
+                        correctPuzzles++;
+                }
+            }
+
+            if (correctPuzzles == puzzles.Length - 1)
+            {
+                _isFinished = true;
+                finishedPanel.SetActive(true);
             }
         }
     }

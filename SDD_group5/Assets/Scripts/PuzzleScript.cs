@@ -9,6 +9,8 @@ public class PuzzleScript : MonoBehaviour
 
     public int number;
 
+    public bool inRightPlace;
+
     //For debugging
     //private SpriteRenderer _sprite;
 
@@ -28,11 +30,15 @@ public class PuzzleScript : MonoBehaviour
         {
             //For debugging
             //_sprite.color = Color.green;
+
+            inRightPlace = true;
         }
         else
         {
             //For debugging
             //_sprite.color = Color.white;
+
+            inRightPlace = false;
         }
     }
 }
