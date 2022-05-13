@@ -22,7 +22,7 @@ public class PuzzleGameScript : MonoBehaviour
     void Start()
     {
         _camera = Camera.main;
-        Shuffle();
+        Shuffle(); //random puzzle everytime
     }
 
     void Update()
@@ -35,6 +35,7 @@ public class PuzzleGameScript : MonoBehaviour
             {
                 if (Vector2.Distance(a: emptySpace.position, b: hit.transform.position) < 2.5)
                 {
+                    //move puzzle
                     Vector2 lastEmptySpacePos = emptySpace.position;
                     PuzzleScript thisPuzzle = hit.transform.GetComponent<PuzzleScript>();
                     emptySpace.position = thisPuzzle.targetPos;
@@ -60,7 +61,7 @@ public class PuzzleGameScript : MonoBehaviour
                 }
             }
 
-            if (correctPuzzles == puzzles.Length - 1)
+            if (correctPuzzles == puzzles.Length - 1)   //check is the puzzle finished
             {
                 _isFinished = true;
                 finishedPanel.SetActive(true);
@@ -68,7 +69,7 @@ public class PuzzleGameScript : MonoBehaviour
         }
     }
 
-    public void Shuffle()
+    public void Shuffle()   //generate random puzzle
     {
         int invertion;
         do
@@ -97,7 +98,7 @@ public class PuzzleGameScript : MonoBehaviour
             }
 
             invertion = GetInversions();
-            Debug.Log("shuffle");
+            //Debug.Log("shuffle");
         } while (invertion % 2 != 0);
     }
 
