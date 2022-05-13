@@ -19,9 +19,16 @@ public class PuzzleGameScript : MonoBehaviour
     [SerializeField]
     private GameObject finishedPanel;
 
+    [SerializeField]
+    private AudioSource source;
+
+    [SerializeField]
+    private AudioClip puzzleSound;
+
     void Start()
     {
         _camera = Camera.main;
+
         Shuffle(); //random puzzle everytime
     }
 
@@ -40,6 +47,7 @@ public class PuzzleGameScript : MonoBehaviour
                     PuzzleScript thisPuzzle = hit.transform.GetComponent<PuzzleScript>();
                     emptySpace.position = thisPuzzle.targetPos;
                     thisPuzzle.targetPos = lastEmptySpacePos;
+                    source.PlayOneShot(puzzleSound);
 
                     int puzzleIndex = FindIndex(thisPuzzle);
                     puzzles[emptySpaceIndex] = puzzles[puzzleIndex];

@@ -2124,6 +2124,8 @@ MonoBehaviour:
   - {fileID: 1814602341}
   - {fileID: 0}
   finishedPanel: {fileID: 2132236057}
+  source: {fileID: 726716151}
+  puzzleSound: {fileID: 8300000, guid: e51f6a4fd714dfc439577d70d8b19173, type: 3}
 --- !u!1 &1503942573
 GameObject:
   m_ObjectHideFlags: 0
