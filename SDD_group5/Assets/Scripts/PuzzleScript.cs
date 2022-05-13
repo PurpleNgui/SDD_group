@@ -7,10 +7,12 @@ public class PuzzleScript : MonoBehaviour
     public Vector3 targetPos;
     private Vector3 correctPos;
 
+    public int number;
+
     //For debugging
     //private SpriteRenderer _sprite;
 
-    void Start()
+    void Awake()
     {
         targetPos = transform.position;
         correctPos = transform.position;

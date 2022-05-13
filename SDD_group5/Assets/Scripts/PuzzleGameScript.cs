@@ -12,10 +12,13 @@ public class PuzzleGameScript : MonoBehaviour
     [SerializeField]
     private PuzzleScript[] puzzles;
 
+    private int emptySpaceIndex = 15;
+
     // Start is called before the first frame update
     void Start()
     {
-        _camera = Camera.main; 
+        _camera = Camera.main;
+        Shuffle();
     }
 
     // Update is called once per frame
@@ -33,8 +36,83 @@ public class PuzzleGameScript : MonoBehaviour
                     PuzzleScript thisPuzzle = hit.transform.GetComponent<PuzzleScript>();
                     emptySpace.position = thisPuzzle.targetPos;
                     thisPuzzle.targetPos = lastEmptySpacePos;
+
+                    int puzzleIndex = FindIndex(thisPuzzle);
+                    puzzles[emptySpaceIndex] = puzzles[puzzleIndex];
+                    puzzles[puzzleIndex] = null;
+                    emptySpaceIndex = puzzleIndex;
                 }
             }
         }
+    }
+
+    public void Shuffle()
+    {
+        int invertion;
+        do
+        {
+            if (emptySpaceIndex != 15)
+            {
+                var puzzleOn15LastPos = puzzles[15].targetPos;
+                puzzles[15].targetPos = emptySpace.position;
+                emptySpace.position = puzzleOn15LastPos;
+                puzzles[emptySpaceIndex] = puzzles[15];
+                puzzles[15] = null;
+                emptySpaceIndex = 15;
+            }
+
+            for (int i = 0; i <= 14; i++)
+            {
+                var lastPos = puzzles[i].targetPos;
+                int randomIndex = Random.Range(0, 14);
+
+                puzzles[i].targetPos = puzzles[randomIndex].targetPos;
+                puzzles[randomIndex].targetPos = lastPos;
+
+                var puzzle = puzzles[i];
+                puzzles[i] = puzzles[randomIndex];
+                puzzles[randomIndex] = puzzle;
+            }
+
+            invertion = GetInversions();
+            Debug.Log("shuffle");
+        } while (invertion % 2 != 0);
+    }
+
+    public int FindIndex(PuzzleScript ps)
+    {
+        for (int i = 0; i < puzzles.Length; i++)
+        {
+            if (puzzles[i] != null)
+            {
+                if (puzzles[i] == ps)
+                {
+                    return i;
+                }
+            }
+        }
+
+        return -1;
+    }
+
+    int GetInversions()
+    {
+        int inversionsSum = 0;
+        for (int i = 0; i < puzzles.Length; i++)
+        {
+            int thisPuzzleInvertion = 0;
+            for (int j = i; j < puzzles.Length; j++)
+            {
+                if (puzzles[j] != null)
+                {
+                    if (puzzles[i].number > puzzles[j].number)
+                    {
+                        thisPuzzleInvertion++;
+                    }
+                }
+            }
+            inversionsSum += thisPuzzleInvertion;
+        }
+        return inversionsSum;
     }
 }
