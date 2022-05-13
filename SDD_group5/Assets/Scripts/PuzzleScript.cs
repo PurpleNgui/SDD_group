@@ -4,28 +4,33 @@ using UnityEngine;
 
 public class PuzzleScript : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject EmptySpace;
+    public Vector3 targetPos;
+    private Vector3 correctPos;
 
-    private Camera _camera;
+    //For debugging
+    //private SpriteRenderer _sprite;
 
-    // Start is called before the first frame update
     void Start()
     {
-        _camera = Camera.main; 
+        targetPos = transform.position;
+        correctPos = transform.position;
+
+        //For debugging
+        //_sprite = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        transform.position = Vector3.Lerp(a: transform.position, b: targetPos, t: 0.05f);
+        if (targetPos == correctPos)
         {
-            Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-            if (hit)
-            {
-                Debug.Log(hit.transform.name);
-            }
+            //For debugging
+            //_sprite.color = Color.green;
+        }
+        else
+        {
+            //For debugging
+            //_sprite.color = Color.white;
         }
     }
 }
