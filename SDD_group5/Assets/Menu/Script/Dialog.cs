@@ -13,6 +13,8 @@ public class Dialog : MonoBehaviour
     public Image Wiki;
     public Image mainch;
 
+    public bool IsPause;
+
 
     private int index;
     // Start is called before the first frame update
@@ -72,4 +74,5 @@ public class Dialog : MonoBehaviour
         }
 
     }
+
 }

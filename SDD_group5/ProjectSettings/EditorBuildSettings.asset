@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Menu/Scenes/StartMenu.unity
     guid: af2f96636d31af4468abef67904fc139
+  - enabled: 1
+    path: Assets/Scenes/BirdGameScene.unity
+    guid: bc62145267735e943b201423467fd5a7
+  - enabled: 1
+    path: Assets/Scenes/MazeScene.unity
+    guid: cc64568b2ff1a894d8b85e09cf8af737
+  - enabled: 1
+    path: Assets/Scenes/StoryScene.unity
+    guid: 2d878da40a2e517468d0ddae7acdf351
   m_configObjects: {}
