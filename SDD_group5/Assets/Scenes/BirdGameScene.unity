@@ -644,9 +644,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf12aae394a411a44a67582613f6555b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xPos: 0
-  yPos: 0
+  speed: 3
   InteractiveObject: {fileID: 617943118}
+  FishingNet1: {fileID: 762329363}
+  FishingNet2: {fileID: 1953621960}
+  FishingNet3: {fileID: 164557844}
+  FishingNet4: {fileID: 145045851}
+  FishingNet5: {fileID: 1482533634}
+  FishingNet6: {fileID: 1420631186}
 --- !u!1 &762329363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,11 +1140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1792531737458676262, guid: 495dcc1640c68f048b1800928a2f6aeb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -134
+      value: -21
       objectReference: {fileID: 0}
     - target: {fileID: 1792531737458676262, guid: 495dcc1640c68f048b1800928a2f6aeb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 52
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 1792531737458676262, guid: 495dcc1640c68f048b1800928a2f6aeb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
