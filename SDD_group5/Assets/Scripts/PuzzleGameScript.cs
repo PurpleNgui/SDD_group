@@ -73,6 +73,7 @@ public class PuzzleGameScript : MonoBehaviour
             {
                 _isFinished = true;
                 finishedPanel.SetActive(true);
+
             }
         }
     }
