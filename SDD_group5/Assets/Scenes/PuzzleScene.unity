@@ -2037,7 +2037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &666106543
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2317,13 +2317,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1912111411}
   lines:
-  - hello world!!
-  - fdkjfjdfsklj
-  - oooooooooh
-  - dksdlfldskldkfs
+  - Eh...EhEh..
+  - '?'
+  - Here.
+  - Who are you?
+  - I am Wiki.
+  - Then who are you?
+  - I am...
+  - Forget it..., I don't want to know.
+  - ...
+  - By the way, are you going for a rescue operation?
+  - Yes?..
+  - So it makes sense to solve the puzzle before going on a mission, right?
+  - No.
+  - Anyway, let's play the puzzle!
+  - Don't you explain the rules?
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   textSpeed: 0.1
   Wiki: {fileID: 507291825}
   mainch: {fileID: 446427829}
+  IsPause: 0
 --- !u!1 &759322937
 GameObject:
   m_ObjectHideFlags: 0
@@ -3848,7 +3875,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1669845230
 RectTransform:
   m_ObjectHideFlags: 0
