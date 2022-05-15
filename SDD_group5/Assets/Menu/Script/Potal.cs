@@ -20,8 +20,8 @@ public class Potal : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("hit");
-            SceneManager.LoadScene("StartMenu");
+            //Debug.Log("hit");
+            SceneManager.LoadScene("StoryScene3");
 
         }
     }

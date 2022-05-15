@@ -26,7 +26,7 @@ public class StartMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("MazeScene");
+        SceneManager.LoadScene("StoryScene");
     }
 
     public void QuitGame()
