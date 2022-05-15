@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class TimerScript : MonoBehaviour
 {
+    bool startStartGame = false;
     bool startGame = false;
     bool endGame = false;
 
@@ -25,19 +26,30 @@ public class TimerScript : MonoBehaviour
     public GameObject startCountDownTimeGO;
     public Text startCountDownTimeText;
 
+    public GameObject startGamePlane;
+
     public GameObject restartUI;
+
+    public GameObject heart1;
+    public GameObject heart2;
+    public GameObject heart3;
+    public GameObject heart4;
+
+    public AudioClip seagullSound;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         Time.timeScale = 1f;
-        redButtonTime = Random.Range(5, 11);
+        redButtonTime = Random.Range(3, 8);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(startGame == false)
+        if(startGame == false && startStartGame == true)
         {
             if (startCountDownTime >= 0)
             {
@@ -97,7 +109,7 @@ public class TimerScript : MonoBehaviour
             {
                 buttonCanvas.SendMessage("RBRandomPosition");
                 RedButton.SetActive(true);
-                redButtonTime = Random.Range(5, 11);
+                redButtonTime = Random.Range(3, 8);
             }
 
             if (RedButton.activeInHierarchy)
@@ -139,11 +151,33 @@ public class TimerScript : MonoBehaviour
         injuried++;
         Debug.Log("injuried" + injuried);
         boold.SetActive(true);
-        if (injuried == 4)
+        audioSource.PlayOneShot(seagullSound);
+
+        if (injuried == 1)
         {
+            heart4.SetActive(false);
+        }
+        else if(injuried == 2)
+        {
+            heart3.SetActive(false);
+        }
+        else if(injuried == 3)
+        {
+            heart2.SetActive(false);
+        }
+        else if(injuried == 4)
+        {
+            heart1.SetActive(false);
             endGame = true;
             restartUI.SetActive(true);
             Time.timeScale = 0f;
         }
+    }
+
+    public void StartStartGame()
+    {
+        ButtonScript.SetNumberOfFishingNet(6);
+        startStartGame = true;
+        startGamePlane.SetActive(false);
     }
 }

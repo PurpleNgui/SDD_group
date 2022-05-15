@@ -7,6 +7,8 @@ public class ButtonScript : MonoBehaviour
 { 
     private int xPos;
     private int yPos;
+    private int x;
+    private int y;
 
     private int combo = 0;
     private static int NumberOfFishingNet = 6;
@@ -63,9 +65,9 @@ public class ButtonScript : MonoBehaviour
 
     public void RBRandomPosition()
     {
-        xPos = Random.Range(110, 1810);
-        yPos = Random.Range(140, 940);
-        RedButton.transform.position = new Vector2(xPos, yPos);
+        x = Random.Range(30, 50);
+        y = Random.Range(-50, 50);
+        RedButton.transform.position = new Vector2(xPos+x, yPos+y);
     }
 
     public void CutFishingNet()
@@ -116,5 +118,10 @@ public class ButtonScript : MonoBehaviour
     public static int GetNumberOfFishingNet()
     {
         return NumberOfFishingNet;
+    }
+
+    public static void SetNumberOfFishingNet(int n)
+    {
+        NumberOfFishingNet = n;
     }
 }
