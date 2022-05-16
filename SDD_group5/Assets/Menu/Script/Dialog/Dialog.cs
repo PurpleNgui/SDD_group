@@ -22,7 +22,7 @@ public class Dialog : MonoBehaviour
     {
         textComponent.text = string.Empty;
         StartDialogue();
-        Wiki.enabled = false;
+        mainch.enabled = false;
     }
 
     // Update is called once per frame
@@ -48,7 +48,7 @@ public class Dialog : MonoBehaviour
     }
     IEnumerator TypeLine()
     {
-        foreach(char c in lines[index].ToCharArray())
+        foreach (char c in lines[index].ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
@@ -57,22 +57,67 @@ public class Dialog : MonoBehaviour
     }
     void NextLine()
     {
-        Wiki.enabled = false;
+        //Wiki.enabled = false;
         if (index < lines.Length - 1)
         {
             index++;
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
-            if (index == 2)
-            {
-                Wiki.enabled = true;
-            }
+            ChangeRoles();
+            //if (index == 2)
+            //{
+            //    Wiki.enabled = true;
+            //}
         }
         else
         {
+            Wiki.enabled = false;
+            mainch.enabled = false;
             gameObject.SetActive(false);
         }
 
+    }
+
+    void ChangeRoles()
+    {
+        switch (index)
+        {
+            case 0:
+            case 2:
+            case 4:
+            case 5:
+            case 7:
+            case 9:
+            case 11:
+            case 13:
+            case 15:
+            case 17:
+            case 18:
+            case 20:
+            case 21:
+                Wiki.enabled = true;
+                mainch.enabled = false;
+                break;
+
+            case 1:
+            case 3:
+            case 6:
+            case 8:
+            case 10:
+            case 12:
+            case 14:
+            case 16:
+            case 19:
+                Wiki.enabled = false;
+                mainch.enabled = true;
+                break;
+
+            default:
+                Wiki.enabled = false;
+                mainch.enabled = false;
+                break;
+
+        }
     }
 
 }

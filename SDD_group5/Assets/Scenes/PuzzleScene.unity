@@ -1204,7 +1204,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &446427828
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2318,36 +2318,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1912111411}
   lines:
-  - "\u6904\u6773"
+  - "\u6B38...\u6B38\u6B38..."
   - '?'
-  - Here.
-  - Who are you?
-  - I am Wiki.
-  - Then who are you?
-  - I am...
-  - Forget it..., I don't want to know.
+  - "\u9019\u88E1!\u9019\u88E1!"
+  - "\u4F60\u662F\u8AB0?"
+  - "\u6211\u662F\u79D1\u666E\u5C0F\u7CBE\u9748\u3002"
+  - "\u90A3\u4F60\u662F\u8AB0?"
+  - "\u6211\u662F..."
+  - "\u7B97\u4E86, \u6211\u9084\u662F\u4E0D\u60F3\u77E5\u9053\u3002"
   - ...
-  - By the way, are you going for a rescue operation?
-  - Yes?..
-  - So it makes sense to solve the puzzle before going on a mission, right?
-  - No.
-  - Anyway, let's play the puzzle!
-  - Don't you explain the rules?
-  - 
-  - efdsds
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - "\u5C0D\u4E86, \u4F60\u662F\u4E0D\u662F\u8981\u53BB\u6551\u63F4\u884C\u52D5?"
+  - "\u662F\u7684..."
+  - "\u90A3\u5728\u9032\u884C\u4EFB\u52D9\u524D,\u89E3\u500B\u62FC\u5716\u4E5F\u5F88\u5408\u7406\u5427?"
+  - "...\u4E26\u6C92\u6709\u3002"
+  - "\u6B38, \u4F60\u77E5\u905390%\u7684\u6D77\u9CE5\u9AD4\u5167\u542B\u6709\u5851\u81A0,
+    \u9810\u8A08\u52302050\u5E74\u5C07\u9054\u523099%\u55CE?"
+  - "\u4F60\u662F\u5728\u79D1\u666E\u55CE?"
+  - "\u662F\u7684, \u7562\u7ADF\u6211\u662F\u79D1\u666E\u5C0F\u7CBE\u9748\u3002"
+  - "\u597D\u54E6\u3002"
+  - "\u7E3D\u4E4B,\u4F86\u73A9\u62FC\u5716\u5427!"
+  - Go!Go!Go!
+  - "\u4F60\u4E0D\u89E3\u91CB\u4E00\u4E0B\u898F\u5247\u55CE?"
+  - "\u4F60\u4E0D\u73A9\u4E00\u4E0B\u518D\u73A9\u554F\u55CE?"
+  - "\u53CD\u6B63\u5C31...Go!Go!Go!"
   textSpeed: 0.1
   Wiki: {fileID: 507291825}
   mainch: {fileID: 446427829}
@@ -4718,7 +4711,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u7530"
+  m_text: Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 847ed300b2d46db4992d2b9145c4031f, type: 2}
   m_sharedMaterial: {fileID: 4524952879363448426, guid: 847ed300b2d46db4992d2b9145c4031f, type: 2}
