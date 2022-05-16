@@ -27,6 +27,8 @@ public class ComicsTimeScript : MonoBehaviour
     public GameObject comic16;
     public GameObject comic17;
 
+    public GameObject whitePanel;
+
     public GameObject nextPageButton;
 
     // Update is called once per frame
@@ -117,6 +119,7 @@ public class ComicsTimeScript : MonoBehaviour
         }
         else if (timer <= 10 && currentPage == 6)
         {
+            whitePanel.SetActive(true);
             nextPageButton.SetActive(false);
             timer += Time.deltaTime;
             //Debug.Log("1: " + timer);
