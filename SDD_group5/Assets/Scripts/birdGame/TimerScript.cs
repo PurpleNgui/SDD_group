@@ -142,7 +142,7 @@ public class TimerScript : MonoBehaviour
         {
             qteTime = 10;
             button.SetActive(false);
-            SceneManager.LoadScene("StoryScene");
+            SceneManager.LoadScene("Story4Scene");
         }
     }
 

@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BirdGameScene.unity
     guid: bc62145267735e943b201423467fd5a7
+  - enabled: 1
+    path: Assets/Scenes/StoryScene4.unity
+    guid: edc76ce3eed7d594ebd7123a20a60e72
   m_configObjects: {}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PuzzleGameScript : MonoBehaviour
 {
@@ -146,5 +147,10 @@ public class PuzzleGameScript : MonoBehaviour
             inversionsSum += thisPuzzleInvertion;
         }
         return inversionsSum;
+    }
+
+    public void Next()
+    {
+        SceneManager.LoadScene("StoryScene2");
     }
 }
