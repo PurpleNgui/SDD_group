@@ -65,7 +65,7 @@ public class ButtonScript : MonoBehaviour
 
     public void RBRandomPosition()
     {
-        x = Random.Range(30, 50);
+        x = Random.Range(50, 80);
         y = Random.Range(-50, 50);
         RedButton.transform.position = new Vector2(xPos+x, yPos+y);
     }

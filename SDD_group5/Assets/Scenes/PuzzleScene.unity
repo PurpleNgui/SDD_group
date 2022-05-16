@@ -2340,7 +2340,9 @@ MonoBehaviour:
   - Go!Go!Go!
   - "\u4F60\u4E0D\u89E3\u91CB\u4E00\u4E0B\u898F\u5247\u55CE?"
   - "\u4F60\u4E0D\u73A9\u4E00\u4E0B\u518D\u73A9\u554F\u55CE?"
-  - "\u53CD\u6B63\u5C31...Go!Go!Go!"
+  - "\u96E3\u9053\u4F60\u62FC\u5716\u90FD\u4E0D\u6703\u73A9\u55CE?"
+  - "...\u4E5F\u6C92\u6709\u4E0D\u6703\u73A9.."
+  - "\u90A3\u5C31...Go!Go!Go!"
   textSpeed: 0.1
   Wiki: {fileID: 507291825}
   mainch: {fileID: 446427829}

@@ -49,7 +49,7 @@ public class TimerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(startGame == false && startStartGame == true)
+        if (startGame == false && startStartGame == true)
         {
             if (startCountDownTime >= 0)
             {
@@ -138,11 +138,11 @@ public class TimerScript : MonoBehaviour
         {
             qteTime = 1;
         }
-        else
+        else if(ButtonScript.GetNumberOfFishingNet() == 0)
         {
             qteTime = 10;
             button.SetActive(false);
-            SceneManager.LoadScene("Story4Scene");
+            SceneManager.LoadScene("StoryScene4");
         }
     }
 
@@ -157,15 +157,15 @@ public class TimerScript : MonoBehaviour
         {
             heart4.SetActive(false);
         }
-        else if(injuried == 2)
+        else if (injuried == 2)
         {
             heart3.SetActive(false);
         }
-        else if(injuried == 3)
+        else if (injuried == 3)
         {
             heart2.SetActive(false);
         }
-        else if(injuried == 4)
+        else if (injuried == 4)
         {
             heart1.SetActive(false);
             endGame = true;
