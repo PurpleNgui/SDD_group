@@ -147,4 +147,8 @@ public class Dialog3 : MonoBehaviour
         }
     }
 
+    public void Skip()
+    {
+        index = lines.Length - 1;
+    }
 }

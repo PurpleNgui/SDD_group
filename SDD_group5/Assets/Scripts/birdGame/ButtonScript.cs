@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ButtonScript : MonoBehaviour
 { 
@@ -22,7 +23,11 @@ public class ButtonScript : MonoBehaviour
     public GameObject FishingNet4;
     public GameObject FishingNet5;
     public GameObject FishingNet6;
-    //public GameObject b;
+
+    //public Image Wiki;
+    //public Image BigWiki;
+    //public Image mainch;
+    //public GameObject dialog;
 
     public AudioClip cutSound;
     private AudioSource audioSource;
@@ -113,6 +118,10 @@ public class ButtonScript : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene("BirdGameScene");
+        //Wiki.enabled = false;
+        //mainch.enabled = false;
+        //BigWiki.enabled = false;
+        //dialog.SetActive(false);
     }
 
     public static int GetNumberOfFishingNet()
@@ -125,3 +134,4 @@ public class ButtonScript : MonoBehaviour
         NumberOfFishingNet = n;
     }
 }
+
